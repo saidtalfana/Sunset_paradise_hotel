@@ -1,9 +1,9 @@
-package dao;
-
-import dao.model.Reservation;
+package DAO;
+import model.Reservation;
 import java.util.List;
 
 public interface ReservationDAO {
-    void addReservation(Reservation reservation);
-    List<Reservation> getAllReservations();
+    List<Reservation> getReservations();
+    void createReservation(Reservation reservation);
+    void cancelReservation(int reservationId);
 }

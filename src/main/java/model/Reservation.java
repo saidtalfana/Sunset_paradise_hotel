@@ -1,53 +1,68 @@
 package model;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Reservation {
-    private int id;
-    private int chambreId;
-    private LocalDate dateDebut;
-    private LocalDate dateFin;
+    private int reservation_id;
+    private int room_id;
+    private Date start_date;
+    private Date end_date;
+    private String user_id;
 
-    // Constructors
-    public Reservation() {
+    // Constructor, getters, and setters
+    public Reservation(int reservation_id, int room_id, Date start_date, Date end_date, String user_id) {
+        this.reservation_id = reservation_id;
+        this.room_id = room_id;
+        this.start_date = start_date;
+        this.end_date = end_date;
+        this.user_id = user_id;
     }
 
-    public Reservation(int id, int chambreId, LocalDate dateDebut, LocalDate dateFin) {
-        this.id = id;
-        this.chambreId = chambreId;
-        this.dateDebut = dateDebut;
-        this.dateFin = dateFin;
-    }
+    public Reservation( int room_id, Date start_date, Date end_date, String user_id) {
+    	this.room_id = room_id;
+        this.start_date = start_date;
+        this.end_date = end_date;
+        this.user_id = user_id;
+	}
 
-    // Getter and Setter methods
+	// Getters and setters
     public int getId() {
-        return id;
+        return reservation_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-    public int getChambreId() {
-        return chambreId;
+    public void setId(int reservation_id) {
+        this.reservation_id = reservation_id;
     }
 
-    public void setChambreId(int chambreId) {
-        this.chambreId = chambreId;
+    public String getUserId() {
+        return user_id;
     }
 
-    public LocalDate getDateDebut() {
-        return dateDebut;
+    public void setUserId(String user_id) {
+        this.user_id = user_id;
     }
 
-    public void setDateDebut(LocalDate dateDebut) {
-        this.dateDebut = dateDebut;
+    public int getRoomId() {
+        return room_id;
     }
 
-    public LocalDate getDateFin() {
-        return dateFin;
+    public void setRoomId(int room_id) {
+        this.room_id = room_id;
     }
 
-    public void setDateFin(LocalDate dateFin) {
-        this.dateFin = dateFin;
+    public Date getStartDate() {
+        return start_date;
+    }
+
+    public void setStartDate(Date start_date) {
+        this.start_date = start_date;
+    }
+
+    public Date getEndDate() {
+        return end_date;
+    }
+
+    public void setEndDate(Date end_date) {
+        this.end_date = end_date;
     }
 }
